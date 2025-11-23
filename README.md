@@ -2,6 +2,16 @@
 
 A modern, full-stack application for supply chain analytics, featuring demand forecasting, inventory optimization, and route planning.
 
+## Project Structure
+```
+supply-chain-analytics/
+├── backend/          # FastAPI backend application
+├── frontend/         # React frontend application
+├── DataCoSupplyChainDataset.csv
+├── requirements.txt
+└── .env
+```
+
 ## Tech Stack
 - **Backend**: FastAPI, SQLAlchemy, PostgreSQL, Prophet (Forecasting), Scikit-learn
 - **Frontend**: React, Material-UI, Recharts, Axios
@@ -17,13 +27,14 @@ A modern, full-stack application for supply chain analytics, featuring demand fo
 
 Navigate to the root directory:
 ```bash
-cd d:\supply-chain-analytics
+cd supply-chain-analytics
 ```
 
 Create and activate a virtual environment (if not already done):
 ```bash
 python -m venv venv
-.\venv\Scripts\activate
+.\venv\Scripts\activate  # Windows
+source venv/bin/activate  # Linux/Mac
 ```
 
 Install dependencies:
@@ -35,12 +46,12 @@ Setup Environment Variables:
 Ensure you have a `.env` file in the root directory with the following:
 ```env
 DATABASE_URL=postgresql+asyncpg://postgres:password@localhost:5432/supply_chain_db
-KAGGLE_DATASET_PATH=D:\supply-chain-analytics\DataCoSupplyChainDataset.csv
+KAGGLE_DATASET_PATH=./DataCoSupplyChainDataset.csv
 ```
 
 Run the server:
 ```bash
-uvicorn app.main:app --reload
+uvicorn backend.main:app --reload
 ```
 The API will be available at `http://localhost:8000`.
 API Documentation: `http://localhost:8000/docs`
@@ -49,7 +60,7 @@ API Documentation: `http://localhost:8000/docs`
 
 Navigate to the frontend directory:
 ```bash
-cd supply-chain-dashboard
+cd frontend
 ```
 
 Install dependencies:

@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+.env
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+
+# React build
+build/
+dist/
+
+# Logs and datasets
+*.log
+*.csv
+
+# IDE files
+.vscode/
+.DS_Store
+
+# Model files
+*.pth
+*.h5
+*.pkl
+*.pt
+
+# Cache
+.cache/
